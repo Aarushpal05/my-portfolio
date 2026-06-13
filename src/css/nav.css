@@ -1,0 +1,193 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.navbar{
+  width:100%;
+  height:80px;
+  background:black;
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 8%;
+  position:fixed;
+  top:0;
+  left:0;
+
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+  color:rgb(0, 0, 0);
+  font-size:25px;
+  font-weight:500;
+  cursor:pointer;
+}
+
+.logo span{
+  color:#38bdf8;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:35px;
+}
+
+.nav-links li a{
+  color:white;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:500;
+  transition:0.3s;
+  position:relative;
+}
+
+.nav-links li a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  left:0;
+  bottom:-5px;
+  background:#38bdf8;
+  transition:0.3s;
+}
+
+.nav-links li a:hover::after{
+  width:100%;
+}
+
+.nav-links li a:hover{
+  color:#38bdf8;
+}
+
+.contact-btn{
+  padding:10px 24px;
+  background:#38bdf8;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.contact-btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-3px);
+}
+
+.menu-icon{
+  display:none;
+  color:white;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .menu-icon{
+    display:block;
+  }
+
+  .contact-btn{
+    display:none;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:80px;
+    left:-100%;
+
+    width:100%;
+    height:calc(100vh - 80px);
+
+    background:#0f172a;
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:0.5s;
+  }
+
+  .nav-links.active{
+    left:0;
+  }
+
+}
+
+/* Professional Logo Design */
+
+.logo{
+  font-size:25px;
+  font-weight:500;
+  color:#ffffff;
+
+  letter-spacing:1px;
+  cursor:pointer;
+
+  position:relative;
+  display:inline-block;
+
+  text-transform:uppercase;
+
+  transition:0.3s ease;
+}
+
+/* Highlight Text */
+
+.logo span{
+  color:#38bdf8;
+}
+
+/* Hover Effect */
+
+.logo:hover{
+  transform:scale(1.05);
+}
+
+/* Underline Animation */
+
+.logo::after{
+  content:"";
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:3px;
+
+  background:linear-gradient(
+    to right,
+    #38bdf8,
+    #0ea5e9
+  );
+
+  border-radius:10px;
+
+  transition:0.4s ease;
+}
+
+.logo:hover::after{
+  width:100%;
+}
+
+/* Glow Effect */
+
+.logo:hover span{
+  text-shadow:
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #38bdf8;
+}
