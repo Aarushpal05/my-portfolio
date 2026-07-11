@@ -24,7 +24,7 @@ function contact(){
 
                 <div class="detail-box">
                     <i class="bi bi-telephone-fill"></i>
-                    <span>+91 9876543210</span>
+                    <span>+91 7007231859</span>
                 </div>
 
                 <div class="detail-box">

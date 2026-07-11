@@ -5,12 +5,14 @@ import gym from "../assets/gym.avif";
 const projects = [
   {
     title: "Employee Management System",
-    category: "Full Stack Development",
+    category: "Frontend Development",
     description:
       "A complete employee management solution with authentication, CRUD operations, dashboard analytics and responsive UI.",
     tech: ["React", "Django", "MySQL"],
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    liveLink: "https://ayushpal758.pythonanywhere.com/",
+    githubLink:"https://github.com/Aarushpal05/Employee-management-system.git",
   },
   {
     title: "Fitness Gym Website",
@@ -19,16 +21,22 @@ const projects = [
       "Interactive fitness gym website featuring premium UI design.",
     tech: ["React", "CSS3", "JavaScript"],
     image:
-      gym
+      gym,
+    liveLink: "https://ayushfitness.vercel.app",
+    githubLink:"https://github.com/Aarushpal05/Gym-website.git",
   },
   {
     title: "E-Commerce Platform",
-    category: "Web Application",
+    category: "full stack development",
     description:
       "Modern e-commerce website with product management, cart system and secure checkout experience.",
     tech: ["React", "Django", "REST API"],
     image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4"
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
+    liveLink:"https://myshop247.vercel.app/",
+    backendLink:"https://ecommerce-backend-1-r8dy.onrender.com/",
+    githubLink:"https://github.com/Aarushpal05/Ecommerce-frontend.git",
+
   }
 ];
 
@@ -73,11 +81,54 @@ function Projects() {
                   <span key={i}>{item}</span>
                 ))}
               </div>
-
               <div className="project-buttons">
-                <a href="https://ayushpal758.pythonanywhere.com/">Live Demo</a>
-                <a href="https://github.com/Aarushpal05/Employee-management-system.git">Github</a>
-              </div>
+  <a
+    href={project.liveLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-live"
+  >
+    <span className="icon">🚀</span>
+
+    <span className="divider"></span>
+
+    <span className="text">Live Demo</span>
+
+    <span className="arrow">↗</span>
+  </a>
+
+  {project.backendLink && (
+    <a
+      href={project.backendLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-backend"
+    >
+      <span className="icon">⚙️</span>
+
+      <span className="divider"></span>
+
+      <span className="text">Backend API</span>
+
+      <span className="arrow">↗</span>
+    </a>
+  )}
+
+  <a
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-github"
+  >
+    <span className="icon">💻</span>
+
+    <span className="divider"></span>
+
+    <span className="text">GitHub</span>
+
+    <span className="arrow">↗</span>
+  </a>
+</div>
 
             </div>
 

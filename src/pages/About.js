@@ -36,7 +36,7 @@ function About() {
 
           <div className="about-stats">
             <div className="stat-box">
-              <h2>15+</h2>
+              <h2>5+</h2>
               <p>Projects</p>
             </div>
 

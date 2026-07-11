@@ -39,6 +39,10 @@ function Navbar() {
           <a href="#contact" onClick={handleLinkClick}>Contact</a>
         </li>
 
+        <li>
+          <a href="#certifications" onClick={handleLinkClick}>Certifications</a>
+        </li>
+
       </ul>
 
       {/* Button */}

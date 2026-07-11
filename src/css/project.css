@@ -163,35 +163,6 @@
 
 /* Buttons */
 
-.project-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:30px;
-}
-
-.project-buttons a{
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:30px;
-    color:white;
-    transition:.4s;
-}
-
-.project-buttons a:first-child{
-    background:linear-gradient(
-    135deg,
-    #06b6d4,
-    #2563eb
-    );
-}
-
-.project-buttons a:last-child{
-    border:1px solid rgba(255,255,255,.2);
-}
-
-.project-buttons a:hover{
-    transform:translateY(-4px);
-}
 
 /* Mobile */
 
@@ -204,4 +175,118 @@
     .projects-grid{
         grid-template-columns:1fr;
     }
+}
+.project-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    min-width:220px;
+    height:64px;
+
+    padding:0 24px;
+
+    border-radius:18px;
+
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:17px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.btn::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:translateX(-120%);
+    transition:.7s;
+}
+
+.btn:hover::before{
+    transform:translateX(120%);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+.icon{
+    font-size:22px;
+}
+
+.divider{
+    width:1px;
+    height:28px;
+    background:rgba(255,255,255,.18);
+}
+
+.text{
+    flex:1;
+}
+
+.arrow{
+    font-size:20px;
+    transition:.3s;
+}
+
+.btn:hover .arrow{
+    transform:translate(4px,-4px);
+}
+
+/* LIVE */
+
+.btn-live{
+    background:linear-gradient(135deg,#06b6d4,#2563eb);
+    box-shadow:
+    0 0 25px rgba(37,99,235,.45),
+    inset 0 1px 1px rgba(255,255,255,.25);
+}
+
+/* BACKEND */
+
+.btn-backend{
+    background:linear-gradient(135deg,#ff9d00,#ff5f00);
+    box-shadow:
+    0 0 25px rgba(255,128,0,.45),
+    inset 0 1px 1px rgba(255,255,255,.25);
+}
+
+/* GITHUB */
+
+.btn-github{
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 18px rgba(255,255,255,.08),
+    inset 0 1px 1px rgba(255,255,255,.08);
+}
+
+.btn-github:hover{
+    background:rgba(255,255,255,.09);
 }

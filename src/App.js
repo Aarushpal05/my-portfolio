@@ -1,41 +1,65 @@
+import React, { useEffect } from "react";
+import Lenis from "lenis";
 
-import './App.css';
-import React from 'react';
+import "./App.css";
 
-import Header from './components/header';
-import Banner from './components/Banner';
-import Footer from './components/footer';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import About from './pages/About';
+import Header from "./components/header";
+import Banner from "./components/Banner";
+import Footer from "./components/footer";
 
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import CertificationTimeline from "./pages/certifications";
 
 function App() {
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
+
   return (
     <>
       <Header />
+
       <section id="home">
-        <Banner/>
+        <Banner />
       </section>
 
       <section id="about">
-        <About/>
+        <About />
       </section>
 
       <section id="skills">
-        <Skills/>
+        <Skills />
       </section>
 
       <section id="projects">
-        <Projects/>
+        <Projects />
       </section>
 
       <section id="contact">
-        <Contact/>
+        <Contact />
       </section>
-      
-      <Footer/>
+
+      <section id="certifications">
+        <CertificationTimeline />
+      </section>
+
+      <Footer />
     </>
   );
 }
