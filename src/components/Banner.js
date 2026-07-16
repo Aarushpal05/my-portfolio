@@ -9,7 +9,7 @@ export default function Banner() {
 
   // Typewriter Effect
   useEffect(() => {
-    const text = "Full Stack Developer ";
+    const text = "Full Stack Web Developer ";
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
